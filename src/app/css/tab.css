@@ -1,0 +1,89 @@
+@import url("colors.css");
+html{
+  height:100%
+}
+
+body{
+  background-color:transparent;
+  color: var(--defaul_text);
+  margin: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --icon-edge: 3px;
+  --icon-edge-selected: 4px;
+}
+
+.tab-radio:checked + label img{
+  border: solid var(--icon-edge-selected) var(--Selected-tab);
+  border-radius: 20%;
+  /*background-color:#FFFFFF;*/
+}
+
+.tab-radio:checked + label p{
+  border: solid var(--icon-edge-selected) var(--Selected-tab);
+  border-radius: 20%;
+  background-color: var(--TextHover_background);
+}
+
+input[name="check"] {
+	display: none;
+}
+
+.tab_bar{
+  list-style: none;
+  padding:0px;
+  margin: 0px;
+}
+
+.tab_bar img{
+  max-height :auto;
+  max-width: auto;
+  width:44px;
+  height:44px;
+  border: solid var(--icon-edge) var(--NotSelected-tab);
+  border-radius: 50%;
+  background-position: left top;
+  /*background-color:#FFFFFF;*/
+}
+
+.tab_bar p{
+  display: table-cell;
+  vertical-align: middle;
+  max-height :auto;
+  max-width: auto;
+  width:44px;
+  height:50px;
+  text-align: center;
+  border: solid var(--icon-edge) var(--NotSelected-tab);
+  background-color: var(--TextBackground);
+  border-radius: 50%;
+  font-size:30px;
+  color:#FFFFFF;
+}
+
+.tab_bar p:hover{
+  border-radius: 50%; 
+  border: solid var(--icon-edge) var(--Hovered-tab);
+  background-color: var(--TextHover_background);
+}
+
+.tab_bar img:hover{
+  border-radius: 50%; 
+  border: solid var(--icon-edge) var(--Hovered-tab)
+}
+
+.tab_bar label{
+  display:inline-block;
+}
+
+.tab_bar li{
+  margin-left:auto;
+  padding-top:5px;
+  max-height: 50px;
+}

@@ -1,0 +1,30 @@
+@import url("colors.css");
+
+.balloonoya {
+    position   : relative;                /* 指定した分だけ相対的に移動 */
+}
+.balloonoya:hover .balloon {
+    display: inline;                /* インライン要素として表示 */
+}
+.balloon {
+    position   : absolute;                /* 親要素を基準 */
+    display: none;                        /* 要素を非表示 */
+    padding: 2px;                         /* テキストの前後の余白 */
+    background-color: var(--TextBackground);       /* 背景色（透明度） */
+    width:180px;                           /*吹き出し全体の幅 */
+    left : 110%;                           /* 表示位置 */
+    top : 25%;                           /* 表示位置 */
+    margin-top : 0px;                    /* 表示位置 */
+    font-size: 100%;                       /* 文字サイズ */
+    color:var(--defaul_text);
+    padding:5px;
+}
+.balloon:after{
+    /*border-bottom: 12px solid #636161;  吹き出し口の高さ・色 */
+    /*border-left: 10px solid transparent;     吹き出し口の幅１／２ */
+    /*border-right: 10px solid transparent;    吹き出し口の幅１／２ */
+    /*top: -12px;                             吹き出し口の位置調整 */
+    /*left : 5%;                              吹き出し口の横位置 */
+    content: "";                       /* コンテンツの挿入 */
+    position: absolute;                /* 親要素を基準 */
+}

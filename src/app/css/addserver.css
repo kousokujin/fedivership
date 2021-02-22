@@ -1,0 +1,139 @@
+@import url("colors.css");
+body{
+    background-color: var(--background);
+    color: var(--defaul_text);
+    margin: 0px;
+}
+
+.page_wrapper{
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:20px;
+}
+
+.wrap_top{
+    padding-bottom: 50px;
+}
+
+.wrap{
+    padding-bottom: 50px;
+    padding-top: 10px;
+    border-top: 1px solid #3c3c3c
+}
+
+input[type="text"]{
+    height: 40px;
+    padding-left:10px;
+    font-size:15px;
+    color: var(--defaul_text);
+    border: solid 1px var(--TextBoxBorder);
+    border-radius: 5px;
+    background: var(--TextBoxBackground);
+    outline:none;
+    width:calc(100% - 130px);
+}
+
+input[type="text"]:hover{
+    outline:none;
+    background: var(--TextBoxBackground_Hover);
+}
+
+input[type="text"]:focus{
+    height: 40px;
+    border: solid 1px var(--Selected-tab);
+    border-radius: 5px;
+    background: var(--TextBoxBackground_Hover);
+    outline:none;
+}
+
+.btn{
+    background-color: var(--Selected-tab);
+    border: solid 1px var(--Selected-tab);
+    position: relative;
+    display:inline-block;
+    line-height: 40px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 5px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--defaul_text);
+    user-select: none;
+    width: 100px;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: var(--Selected-tab-hover)
+}
+
+.btn_remove{
+    background-color:#e72828;
+    border: solid 1px#e72828;
+    position: relative;
+    display:inline-block;
+    line-height: 40px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 5px;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--defaul_text);
+    user-select: none;
+    width: 50px;
+    text-align: center;
+}
+
+.btn_remove:hover{
+    background-color: #f81c1c
+}
+
+h3{
+    margin-top:5px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+
+p{
+    color:var(--paragraf_text);
+    user-select: none;
+}
+
+.table_wrap{
+    padding:30px;
+    width:calc(100% - 60px);
+    background-color: #1a1a1a;
+    border-radius: 5px;
+}
+
+table{
+    width:100%;
+    padding:30px;
+    border-collapse: collapse;
+    user-select: none;
+}
+
+td{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.icon img{
+    width:30px;
+    height:30px;
+}
+
+.icon{
+    width:30px;
+}
+.address_column{
+    width:auto;
+}
+
+.remove_column{
+    width:50px;
+}
+table tr{
+    background-color: var(--tab_background);
+    border-bottom: 3px solid var(--background);
+}

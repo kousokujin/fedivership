@@ -1,0 +1,16 @@
+:root{
+    --background : #222222;
+    --tab_background: #333333;
+    --defaul_text : #FFFFFF;
+    --paragraf_text:#a8a8a8;
+    --Selected-tab: #3183ff;
+    --Selected-tab-hover: #5598fd;
+    --NotSelected-tab:#333333;
+    --Hovered-tab:#c0c0c0;
+    --TextHover_background: #51f38f;
+    --TextBackground:#797979;
+
+    --TextBoxBorder:#797979;
+    --TextBoxBackground:#555555;
+    --TextBoxBackground_Hover:#646464;
+}
