@@ -8,7 +8,7 @@ ActivityPubに対応した分散型SNS用のクライアントです。
 
 ## 対応OS
 Windows10 64bit
-* Mac,Linuについてはそのうち対応版を作ります。(たぶん)
+* Mac,Linuxについてはそのうち対応版を作ります。(たぶん)
 
 ## ダウンロード
 [ダウンロード](https://github.com/kousokujin/fedivership/releases/)
