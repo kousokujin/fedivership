@@ -60,7 +60,7 @@ function createWindow() {
   mainWindow.addBrowserView(title_bar);
   title_bar.setBounds({x:0,y:0,width:WinBound.width,height:50});
   title_bar.setAutoResize({width:true,height:false})
-  title_bar.webContents.loadFile("app/titlebar.html")
+  title_bar.webContents.loadFile(__dirname+"/app/titlebar.html")
 
   //サイドバー表示
   sidebar = new BrowserView({
@@ -77,7 +77,7 @@ function createWindow() {
   //mainWindow.loadFile('app/index.html');
   mainWindow.addBrowserView(sidebar)
 
-  sidebar.webContents.loadFile('app/SideBar.html')
+  sidebar.webContents.loadFile(__dirname+"/app/sidebar.html")
   sidebar.setBounds({ x: 0, y: titleheight, width:60,height:WinBound.height-titleheight})
   sidebar.setAutoResize({width:false,height:true})
 
@@ -93,7 +93,7 @@ function createWindow() {
     }
   })
   mainWindow.addBrowserView(mainview)
-  mainview.webContents.loadFile("app/addserver.html")
+  mainview.webContents.loadFile( __dirname+"/app/addserver.html")
   //mainview.webContents.loadFile("app/maindisplay.html")
   mainview.setBounds({x:60,y:titleheight,width:WinBound.width - 60,height: WinBound.height - titleheight})
   mainview.setAutoResize({width:true,height:true})
@@ -150,7 +150,7 @@ ipcMain.on("changepage", (event, key) => {
 //サーバ追加ボタン
 ipcMain.on("addpageshow",(event,arg)=>{
   console.log("pagechange");
-  mainview.webContents.loadFile("app/addserver.html")
+  mainview.webContents.loadFile( __dirname+"/app/addserver.html")
   //mainview.webContents.send("changepageurl","addserver.html");
   forcus = "add_server";
 })

@@ -2,17 +2,33 @@
   "name": "fedivership",
   "version": "1.0.0",
   "description": "fediverse client",
-  "main": "index.js",
+  "main": "src/main.js",
   "dependencies": {
     "custom-electron-titlebar": "^3.2.6",
-    "electron": "^11.2.3",
     "electron-store": "^7.0.2",
     "jquery": "^3.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "kousokujin",
+  "license": "MIT",
+  "build": {
+    "appId": "com.kousokujin.fedivership",
+    "productName": "fedivership",
+    "files": [
+      "src/",
+      "src/app/",
+      "src/app/css/",
+      "src/app/script/",
+      "src/icon/",
+      "src/preloads/",
+      "package.json",
+      "package-lock.json"
+    ]
+  }
 }
