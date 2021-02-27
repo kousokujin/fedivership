@@ -94,11 +94,11 @@ function createWindow() {
   })
   mainWindow.addBrowserView(mainview)
   //mainview.webContents.loadFile( __dirname+"/app/addserver.html")
-  mainview.webContents.loadFile("app/maindisplay.html")
+  mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
   mainview.setBounds({x:60,y:titleheight,width:WinBound.width - 60,height: WinBound.height - titleheight})
   mainview.setAutoResize({width:true,height:true})
   //sidebar.webContents.openDevTools({mode: 'detach'});
-  mainview.webContents.openDevTools({mode: 'detach'});
+  //mainview.webContents.openDevTools({mode: 'detach'});
 
 
   // メインウィンドウが閉じられたときの処理
@@ -143,7 +143,7 @@ app.on('activate', () => {
 //サーバ切り替えボタン
 ipcMain.on("changepage", (event, key) => {
   //mainview.webContents.loadURL(urls[key]);
-  mainview.webContents.loadFile("app/maindisplay.html")
+  mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
   //mainview.webContents.send("changepageurl",urls[key]);
   forcus = key;
 });
