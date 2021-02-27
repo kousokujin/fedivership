@@ -15,6 +15,8 @@ Windows10 64bit
 
 1.1.0 右クリックメニューの実装
 
+1.1.1 リンクをクリックしたときに外部ブラウザで開かないバグ修正
+
 ## ダウンロード
 [ダウンロード](https://github.com/kousokujin/fedivership/releases/)
 

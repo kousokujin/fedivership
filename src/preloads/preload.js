@@ -1,6 +1,6 @@
 /*const customTitlebar = require("custom-electron-titlebar");
 const { append } = require("custom-electron-titlebar/lib/common/dom");*/
-const { contextBridge, ipcRenderer,remote, ipcMain} = require("electron");
+const { contextBridge, ipcRenderer,shell,remote} = require("electron");
 const {Menu,MenuItem} = remote;
 
 
@@ -47,29 +47,4 @@ contextBridge.exposeInMainWorld(
         },
     }
 
-);
-
-contextBridge.exposeInMainWorld(
-    "menu",{
-        menutest:()=>{
-            const menu = new Menu();
-      
-            // ラベル定義
-            menu.append(new MenuItem({
-              label: 'MenuItem1',
-              click() {
-                console.log('item 1 clicked');
-              }
-            }));
-      
-            // 右クリされたら
-            window.addEventListener('contextmenu', (e) => {
-              e.preventDefault();
-              menu.popup({
-                window: remote.getCurrentWindow()
-              });
-            }, false);
-        }
-
-    }
 );

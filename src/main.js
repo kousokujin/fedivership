@@ -89,16 +89,16 @@ function createWindow() {
       webviewTag: true,
       enableRemoteModule: true,
       contextIsolation:true,
-      preload: __dirname+'/preloads/preload.js',
+      preload: __dirname+'/preloads/preload_mainview.js',
     }
   })
   mainWindow.addBrowserView(mainview)
-  //mainview.webContents.loadFile( __dirname+"/app/addserver.html")
-  mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
+  mainview.webContents.loadFile( __dirname+"/app/addserver.html")
+  //mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
   mainview.setBounds({x:60,y:titleheight,width:WinBound.width - 60,height: WinBound.height - titleheight})
   mainview.setAutoResize({width:true,height:true})
   //sidebar.webContents.openDevTools({mode: 'detach'});
-  //mainview.webContents.openDevTools({mode: 'detach'});
+  mainview.webContents.openDevTools({mode: 'detach'});
 
 
   // メインウィンドウが閉じられたときの処理
@@ -142,16 +142,18 @@ app.on('activate', () => {
 
 //サーバ切り替えボタン
 ipcMain.on("changepage", (event, key) => {
-  //mainview.webContents.loadURL(urls[key]);
-  mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
+  mainview.webContents.loadURL(urls[key]);
+  //mainview.webContents.loadFile(__dirname+"/app/maindisplay.html")
   //mainview.webContents.send("changepageurl",urls[key]);
   forcus = key;
 });
 
 //mainview読み込み完了
+/*
 ipcMain.on("mainview_onload",(event,key)=>{
   mainview.webContents.send("changepageurl",urls[forcus]);
 })
+*/
 
 //サーバ追加ボタン
 ipcMain.on("addpageshow",(event,arg)=>{
