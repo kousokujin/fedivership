@@ -75,7 +75,7 @@ function createWindow() {
     transparent: true,
   })
   //mainWindow.loadFile('app/index.html');
-  mainWindow.addBrowserView(sidebar)
+  //mainWindow.addBrowserView(sidebar)
 
   sidebar.webContents.loadFile(__dirname+"/app/sidebar.html")
   sidebar.setBounds({ x: 0, y: titleheight, width:60,height:WinBound.height-titleheight})
