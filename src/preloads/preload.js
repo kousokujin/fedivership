@@ -1,5 +1,5 @@
-const customTitlebar = require("custom-electron-titlebar");
-const { append } = require("custom-electron-titlebar/lib/common/dom");
+/*const customTitlebar = require("custom-electron-titlebar");
+const { append } = require("custom-electron-titlebar/lib/common/dom");*/
 const { contextBridge, ipcRenderer,remote, ipcMain} = require("electron");
 const {Menu,MenuItem} = remote;
 
@@ -28,6 +28,10 @@ contextBridge.exposeInMainWorld(
         //addserver
         addserver_onload:()=>{
             ipcRenderer.send("addserver_onload","load")
+        },
+        //maiview
+        mainview_onload:()=>{
+            ipcRenderer.send("mainview_onload","load")
         },
         //addserver
         remove_server:(server_key) =>{

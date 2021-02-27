@@ -9,6 +9,7 @@
     "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "devtron": "^1.4.0",
     "electron": "^11.2.3",
     "electron-builder": "^22.9.1"
   },

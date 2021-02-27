@@ -39,6 +39,7 @@ input[name="check"] {
   list-style: none;
   padding:0px;
   margin: 0px;
+  user-select: none;
 }
 
 .tab_bar img{
